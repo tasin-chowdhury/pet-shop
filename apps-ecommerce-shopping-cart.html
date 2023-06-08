@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="images/favicon/favicon-blue.svg">
 
     <!-- third party css -->
-    <link href="assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
     <!-- third party css end -->
 
     <!-- App css -->
@@ -21,6 +20,7 @@
     <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/mycss.css">
+
 </head>
 
 <body class="loading" data-layout="topnav">
@@ -64,7 +64,7 @@
 
                             
 
-                                  
+
 
                             <li class="dropdown notification-list d-none d-sm-inline-block">
                                 <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#"
@@ -120,9 +120,6 @@
 
                                 </div>
                             </li>
-
-
-
                             <li class="dropdown notification-list">
                                 <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown"
                                     id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
@@ -144,37 +141,37 @@
                                     </div>
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <a href="pages-profile.html" class="dropdown-item notify-item">
                                         <i class="mdi mdi-account-circle mr-1"></i>
                                         <span>My Account</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-account-edit mr-1"></i>
-                                        <span>Settings</span>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                                            <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                                        </div>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                                            <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                        </div>
                                     </a>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lifebuoy mr-1"></i>
-                                        <span>Support</span>
-                                    </a>
+                                    
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lock-outline mr-1"></i>
-                                        <span>Lock Screen</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" onclick="logout()" class="dropdown-item notify-item">
+                                    <a href="index.html" onclick="logout()" class="dropdown-item notify-item">
                                         <i class="mdi mdi-logout mr-1"></i>
                                         <span>Logout</span>
                                     </a>
 
                                 </div>
                             </li>
+
+
+
+
 
                         </ul>
                         <a class="navbar-toggle" data-toggle="collapse" data-target="#topnav-menu-content">
@@ -529,7 +526,6 @@
                     </nav>
                 </div>
             </div>
-
             <!-- Start Content-->
             <div class="container-fluid">
 
@@ -539,204 +535,193 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dog</a></li>
-                                    <li class="breadcrumb-item active">Products</li>
+                                    <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="dog-products-user.html">Product</a></li>
+                                    <li class="breadcrumb-item"><a href="apps-ecommerce-products-details.html">Product Details</a></li>
+                                    <li class="breadcrumb-item active">Cart</li>
                                 </ol>
                             </div>
+                            <h4 class="page-title">Product Details</h4>
                         </div>
                     </div>
                 </div>
                 <!-- end page title -->
-                <!-- Banner    -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 d-flex">
-                        <img class="col-xl-12 col-lg-12"
-                            src="https://s7d2.scene7.com/is/image/PetSmart/WEB-23-1742300-Mar23_LPB1_HG-General-DNC_DT" alt="">
-                        <h1 class="col-lg-6 col-sm-6 col-md-6 centered text-danger"><b>Dog Shop</b>
-                        </h1>
-                    </div>
-                </div>
-                <br>
-
-                <!-- Categories -->
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="mb-4 mt-4">Category</h4>
-                    </div> <!-- end col -->
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card-deck-wrapper">
-                            <div class="card-deck">
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL2_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Food</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class=" card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL3_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Treats</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1720601-May23_6TPD1_Dog_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cages</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL5_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cleaning</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1669250-Jan23_6COL3_DL1_Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Flea & Tick</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL12_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Clothing</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end card-deck-->
-                        </div> <!-- end card-deck-wrapper-->
-                    </div> <!-- end col-->
-                </div>
-                <br>
 
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="row mb-2">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless table-centered mb-0">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Product</th>
+                                                        <th>Price</th>
+                                                        <th>Quantity</th>
+                                                        <th>Total</th>
+                                                        <th style="width: 50px;"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <img src="" alt="contact-img" title="contact-img" class="rounded mr-3" height="64">
+                                                            <p class="m-0 d-inline-block align-middle font-16">
+                                                                <a href="apps-ecommerce-products-details.html" class="text-body">Product details</a>
+                                                                <br>
+                                                                <small class="mr-2"><b>Size:</b> Large </small>
+                                                                <small><b>Color:</b> Light Green
+                                                                </small>
+                                                            </p>
+                                                        </td>
+                                                        <td>
+                                                            $800
+                                                        </td>
+                                                        <td>
+                                                            <input type="number" min="1" value="1" class="form-control" placeholder="Qty" style="width: 90px;">
+                                                        </td>
+                                                        <td>
+                                                            $800
+                                                        </td>
+                                                        <td>
+                                                            <a href="javascript:void(0);" class="action-icon"> <i class="mdi mdi-delete"></i></a>
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div> <!-- end table-responsive-->
 
-                                    <div class="col-sm-4">
+                                        <!-- Add note input-->
+                                        <div class="mt-3">
+                                            <label for="example-textarea">Add a Note:</label>
+                                            <textarea class="form-control" id="example-textarea" rows="3" placeholder="Write some note.."></textarea>
+                                        </div>
 
-                                        <a href="add-products.html" id="add-product" class="btn btn-danger mb-2"><i
-                                                class="mdi mdi-plus-circle mr-2"></i> Add Products</a>
+                                        <!-- action buttons-->
+                                        <div class="row mt-4">
+                                            <div class="col-sm-6">
+                                                <a href="apps-ecommerce-products.html" class="btn text-muted d-none d-sm-inline-block btn-link font-weight-semibold">
+                                                    <i class="mdi mdi-arrow-left"></i> Continue Shopping </a>
+                                            </div> <!-- end col -->
+                                            <div class="col-sm-6">
+                                                <div class="text-sm-right">
+                                                    <a href="apps-ecommerce-checkout.html" class="btn btn-danger">
+                                                        <i class="mdi mdi-cart-plus mr-1"></i> Checkout </a>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div> <!-- end row-->
                                     </div>
-                                    
-                                </div>
+                                    <!-- end col -->
 
-                                <div class="table-responsive">
-                                    <table class="table table-centered w-100 dt-responsive nowrap"
-                                        id="products-datatable-dogs">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th class="all" style="width: 20px;">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="customCheck1">
-                                                        <label class="custom-control-label"
-                                                            for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th class="all">Product</th>
-                                                <th>Category</th>
-                                                <th>Added Date</th>
-                                                <th>Price</th>
-                                                <!-- <th>Quantity</th> -->
-                                                <!-- <th>Status</th> -->
-                                                <!-- <th style="width: 85px;">Action</th> -->
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
+                                    <div class="col-lg-4">
+                                        <div class="border p-3 mt-4 mt-lg-0 rounded">
+                                            <h4 class="header-title mb-3">Order Summary</h4>
+
+                                            <div class="table-responsive">
+                                                <table class="table mb-0">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Grand Total :</td>
+                                                            <td>$800.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Discount : </td>
+                                                            <td>-$100.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Shipping Charge :</td>
+                                                            <td>$20</td>
+                                                        </tr>
+                                                        
+                                                        <tr>
+                                                            <th>Total :</th>
+                                                            <th>$720</th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <!-- end table-responsive -->
+                                        </div>
+
+                                        <div class="alert alert-warning mt-3" role="alert">
+                                            Use coupon code <strong>pawsnfeathers</strong> and get 10% discount !
+                                        </div>
+
+                                        <div class="input-group mt-3">
+                                            <input type="text" class="form-control form-control-light" placeholder="Coupon code" aria-label="Recipient's username">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-light" type="button">Apply</button>
+                                            </div>
+                                        </div>
+
+                                    </div> <!-- end col -->
+
+                                </div> <!-- end row -->
                             </div> <!-- end card-body-->
                         </div> <!-- end card-->
                     </div> <!-- end col -->
                 </div>
-                <!-- end row -->
+                <!-- end row-->
 
             </div> <!-- container -->
 
-        </div> <!-- content -->
 
-        <!-- Footer Start -->
-        <footer class="footer">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-6">
-                        <script>document.write(new Date().getFullYear())</script> © Paw & Feathers -
-                        pawsnfeathers.xy
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-md-right footer-links d-none d-md-block">
-                            <a href="javascript: void(0);">About</a>
-                            <a href="javascript: void(0);">Support</a>
-                            <a href="javascript: void(0);">Contact Us</a>
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <script>document.write(new Date().getFullYear())</script> © Paw & Feathers -
+                            pawsnfeathers.xy
+                        </div>
+                        <div class="col-md-12">
+                            <div class="text-md-right footer-links d-none d-md-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- end Footer -->
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
 
     </div>
 
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
-
-
-    </div>
-    <!-- END wrapper -->
 
 
 
 
+
+
+    <!-- /Right-bar -->
 
     <script src="js/module.js"></script>
-    <script>
-        window.onload = function () {
-            getDogFoods();
-       };
-       </script>
     <!-- bundle -->
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/app.min.js"></script>
 
     <!-- third party js -->
-    <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
-    <script src="assets/js/vendor/dataTables.bootstrap4.js"></script>
-    <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
-    <script src="assets/js/vendor/responsive.bootstrap4.min.js"></script>
-    <script src="assets/js/vendor/dataTables.checkboxes.min.js"></script>
-
+    <script src="assets/js/vendor/apexcharts.min.js"></script>
+    <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
     <!-- third party js ends -->
 
     <!-- demo app -->
-    <script src="assets/js/pages/demo.products.js"></script>
+    <script src="assets/js/pages/demo.dashboard.js"></script>
     <!-- end demo js-->
-
 </body>
 
 </html>

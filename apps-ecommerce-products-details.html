@@ -62,22 +62,7 @@
                                 </div>
                             </li>
 
-                            <li class="dropdown notification-list topbar-dropdown d-none d-lg-block">
-                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown"
-                                    id="topbar-languagedrop" href="#" role="button" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <i class="dripicons-user" class="mr-1" height="12"></i>
-                                    <span class="align-middle">Account</span> <i class="mdi mdi-chevron-down"></i>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="topnav-auth">
-                                    <a href="pages-login.html" class="dropdown-item">Login</a>
-                                    <a href="pages-register.html" class="dropdown-item">Register</a>
-                                    <a href="pages-logout.html" class="dropdown-item">Logout</a>
-
-                                </div>
-
-
-                            </li>
+                            
 
 
 
@@ -91,19 +76,19 @@
                                     <div class="p-2">
                                         <div class="row no-gutters">
                                             <div class="col">
-                                                <a class="dropdown-icon-item" href="#">
+                                                <a class="dropdown-icon-item" href="cat-products-user.html">
                                                     <img src="assets/images/brands/cat.png" alt="Cat">
                                                     <span>Cat</span>
                                                 </a>
                                             </div>
                                             <div class="col">
-                                                <a class="dropdown-icon-item" href="#">
+                                                <a class="dropdown-icon-item" href="dog-products-user.html">
                                                     <img src="assets/images/brands/dog.png" alt="Dog">
                                                     <span>Dog</span>
                                                 </a>
                                             </div>
                                             <div class="col">
-                                                <a class="dropdown-icon-item" href="#">
+                                                <a class="dropdown-icon-item" href="bird-products-user.html">
                                                     <img src="assets/images/brands/bird.png" alt="Bird">
                                                     <span>Bird</span>
                                                 </a>
@@ -112,7 +97,7 @@
 
                                         <div class="row no-gutters">
                                             <div class="col">
-                                                <a class="dropdown-icon-item" href="#">
+                                                <a class="dropdown-icon-item" href="fish-products-user.html">
                                                     <img src="assets/images/brands/fish.png" alt="Fish">
                                                     <span>Fish</span>
                                                 </a>
@@ -132,6 +117,54 @@
 
                                         </div>
                                     </div>
+
+                                </div>
+                            </li>
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown"
+                                    id="topbar-userdrop" href="#" role="button" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    <span class="account-user-avatar">
+                                        <img src="assets/images/users/avatar-1.jpg" alt="user-image"
+                                            class="rounded-circle">
+                                    </span>
+                                    <span>
+                                        <span class="account-user-name" id="user-name"></span>
+                                        <span class="account-position" id="user-role"></span>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
+                                    aria-labelledby="topbar-userdrop">
+                                    <!-- item-->
+                                    <div class=" dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="pages-profile.html" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-account-circle mr-1"></i>
+                                        <span>My Account</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                                            <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                                        </div>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                                            <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                        </div>
+                                    </a>
+
+                                    
+
+                                    <!-- item-->
+                                    <a href="index.html" onclick="logout()" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-logout mr-1"></i>
+                                        <span>Logout</span>
+                                    </a>
 
                                 </div>
                             </li>
@@ -502,8 +535,8 @@
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">eCommerce</a></li>
+                                    <li class="breadcrumb-item"><a href="logIn.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="dog-products-user.html">Product</a></li>
                                     <li class="breadcrumb-item active">Product Details</li>
                                 </ol>
                             </div>
@@ -521,34 +554,18 @@
                                     <div class="col-lg-5">
                                         <!-- Product image -->
                                         <a href="javascript: void(0);" class="text-center d-block mb-4">
-                                            <img src="assets/images/products/product-5.jpg" class="img-fluid"
+                                            <img src="" id="product-picture" class="img-fluid"
                                                 style="max-width: 280px;" alt="Product-img" />
                                         </a>
 
-                                        <div class="d-lg-flex d-none justify-content-center">
-                                            <a href="javascript: void(0);">
-                                                <img src="assets/images/products/product-1.jpg"
-                                                    class="img-fluid img-thumbnail p-2" style="max-width: 75px;"
-                                                    alt="Product-img" />
-                                            </a>
-                                            <a href="javascript: void(0);" class="ml-2">
-                                                <img src="assets/images/products/product-6.jpg"
-                                                    class="img-fluid img-thumbnail p-2" style="max-width: 75px;"
-                                                    alt="Product-img" />
-                                            </a>
-                                            <a href="javascript: void(0);" class="ml-2">
-                                                <img src="assets/images/products/product-3.jpg"
-                                                    class="img-fluid img-thumbnail p-2" style="max-width: 75px;"
-                                                    alt="Product-img" />
-                                            </a>
-                                        </div>
+                                        
                                     </div> <!-- end col -->
                                     <div class="col-lg-7">
                                         <form class="pl-lg-4">
                                             <!-- Product title -->
-                                            <h3 class="mt-0">Amazing Modern Chair (Orange) <a
+                                            <h3 class="mt-0" id="product-name"><a
                                                     href="javascript: void(0);" class="text-muted"> </h3>
-                                            <p class="mb-1">Added Date: 09/12/2018</p>
+                                                    <p class="mb-1" id="added-date"></p>
                                             <p class="font-16">
                                                 <span class="text-warning mdi mdi-star"></span>
                                                 <span class="text-warning mdi mdi-star"></span>
@@ -565,7 +582,7 @@
                                             <!-- Product description -->
                                             <div class="mt-4">
                                                 <h6 class="font-14">Retail Price:</h6>
-                                                <h3> $139.58</h3>
+                                                <h3 id="product-price"></h3>
                                             </div>
 
                                             <!-- Quantity -->
@@ -574,23 +591,21 @@
                                                 <div class="d-flex">
                                                     <input type="number" min="1" value="1" class="form-control"
                                                         placeholder="Qty" style="width: 90px;">
-                                                    <button type="button" class="btn btn-danger ml-2"><i
+                                                    <a href="apps-ecommerce-shopping-cart.html">
+                                                        <button type="button" class="btn btn-danger ml-2"><i
                                                             class="mdi mdi-cart mr-1"></i> Add to cart</button>
+                                                    </a>
                                                 </div>
                                             </div>
 
                                             <!-- Product description -->
                                             <div class="mt-4">
-                                                <h6 class="font-14">Description:</h6>
-                                                <p>It is a long established fact that a reader will be distracted by the
-                                                    readable content of a page when looking at its layout. The point of
-                                                    using Lorem Ipsum is that it has a more-or-less normal distribution
-                                                    of letters, as opposed to using 'Content here, content here', making
-                                                    it look like readable English. </p>
+                                                <h6 class="font-14" >Description:</h6>
+                                                <p id="product-description"></p>
                                             </div>
 
                                             <!-- Product information -->
-                                            <div class="mt-4">
+                                            <!-- <div class="mt-4">
                                                 <div class="row">
                                                     <div class="col-md-4">
                                                         <h6 class="font-14">Available Stock:</h6>
@@ -600,12 +615,9 @@
                                                         <h6 class="font-14">Number of Orders:</h6>
                                                         <p class="text-sm lh-150">5,458</p>
                                                     </div>
-                                                    <div class="col-md-4">
-                                                        <h6 class="font-14">Revenue:</h6>
-                                                        <p class="text-sm lh-150">$8,57,014</p>
-                                                    </div>
+                                                    
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                         </form>
                                     </div> <!-- end col -->
@@ -615,19 +627,18 @@
                                     <table class="table table-bordered table-centered mb-0">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th>Outlets</th>
-                                                <th>Price</th>
-                                                <th>Stock</th>
-                                                <th>Revenue</th>
+                                                <th>Name</th>
+                                                <th>Review</th>
+                                                <th>Rating</th>
+                                                
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>ASOS Ridley Outlet - NYC</td>
-                                                <td>$139.58</td>
+                                                <td>Tasin </td>
+                                                <td>7</td>
                                                 <td>
                                                     <div class="progress-w-percent mb-0">
-                                                        <span class="progress-value">478 </span>
                                                         <div class="progress progress-sm">
                                                             <div class="progress-bar bg-success" role="progressbar"
                                                                 style="width: 56%;" aria-valuenow="56" aria-valuemin="0"
@@ -635,14 +646,12 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>$1,89,547</td>
                                             </tr>
                                             <tr>
-                                                <td>Marco Outlet - SRT</td>
-                                                <td>$149.99</td>
+                                                <td>Abdur Rahman</td>
+                                                <td>3</td>
                                                 <td>
                                                     <div class="progress-w-percent mb-0">
-                                                        <span class="progress-value">73 </span>
                                                         <div class="progress progress-sm">
                                                             <div class="progress-bar bg-danger" role="progressbar"
                                                                 style="width: 16%;" aria-valuenow="16" aria-valuemin="0"
@@ -650,14 +659,12 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>$87,245</td>
                                             </tr>
                                             <tr>
-                                                <td>Chairtest Outlet - HY</td>
-                                                <td>$135.87</td>
+                                                <td>Israth Rahman</td>
+                                                <td>8</td>
                                                 <td>
                                                     <div class="progress-w-percent mb-0">
-                                                        <span class="progress-value">781 </span>
                                                         <div class="progress progress-sm">
                                                             <div class="progress-bar bg-success" role="progressbar"
                                                                 style="width: 72%;" aria-valuenow="72" aria-valuemin="0"
@@ -665,14 +672,12 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>$5,87,478</td>
                                             </tr>
                                             <tr>
-                                                <td>Nworld Group - India</td>
-                                                <td>$159.89</td>
+                                                <td>Effat Ara</td>
+                                                <td>9</td>
                                                 <td>
                                                     <div class="progress-w-percent mb-0">
-                                                        <span class="progress-value">815 </span>
                                                         <div class="progress progress-sm">
                                                             <div class="progress-bar bg-success" role="progressbar"
                                                                 style="width: 89%;" aria-valuenow="89" aria-valuemin="0"
@@ -680,7 +685,6 @@
                                                         </div>
                                                     </div>
                                                 </td>
-                                                <td>$55,781</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -733,6 +737,16 @@
 
     <!-- /Right-bar -->
 
+    <script src="js/module.js"></script>
+    <script>
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const prouductId = urlParams.get('pid');
+            console.log(urlParams);
+            console.log(prouductId);
+            getProductDetails(prouductId);
+       };
+    </script>
     <!-- bundle -->
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/app.min.js"></script>

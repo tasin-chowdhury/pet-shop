@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +65,7 @@
 
                             
 
-                                  
+                                
 
                             <li class="dropdown notification-list d-none d-sm-inline-block">
                                 <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#"
@@ -132,8 +133,8 @@
                                             class="rounded-circle">
                                     </span>
                                     <span>
-                                        <span class="account-user-name" id="user-name"></span>
-                                        <span class="account-position" id="user-role"></span>
+                                        <span class="account-user-name" id="user-name">Tasin Tahiat Chowdhury</span>
+                                        <span class="account-position"  id="user-role">Admin</span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown"
@@ -144,31 +145,33 @@
                                     </div>
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <a href="pages-profile.html" class="dropdown-item notify-item">
                                         <i class="mdi mdi-account-circle mr-1"></i>
                                         <span>My Account</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-account-edit mr-1"></i>
-                                        <span>Settings</span>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                                            <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                                        </div>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                                            <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                        </div>
+                                    </a>
+
+                                    
+
+                                    <!-- item-->
+                                    <a href="index.html" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-logout mr-1"></i>
+                                        <span>Logout</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lifebuoy mr-1"></i>
-                                        <span>Support</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lock-outline mr-1"></i>
-                                        <span>Lock Screen</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" onclick="logout()" class="dropdown-item notify-item">
                                         <i class="mdi mdi-logout mr-1"></i>
                                         <span>Logout</span>
                                     </a>
@@ -531,150 +534,93 @@
             </div>
 
             <!-- Start Content-->
-            <div class="container-fluid">
+            <div class="container-fluid">              
 
-                <!-- start page title -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="page-title-box">
-                            <div class="page-title-right">
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dog</a></li>
-                                    <li class="breadcrumb-item active">Products</li>
-                                </ol>
+                <div class="container-fluid">
+                        
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="logIn.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="blogs.html">Product</a></li>
+                                        <li class="breadcrumb-item active">Add Product</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Add Product</h4>
                             </div>
                         </div>
+                    </div>     
+                    <!-- end page title --> 
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-xl-6">
+                                            <div class="form-group">
+                                                <label for="product-name">Product Name</label>
+                                                <input type="text" id="product-name" class="form-control" placeholder="Enter product name">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="project-overview">Description</label>
+                                                <textarea class="form-control" id="product-description" rows="5" placeholder="Enter product description"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="projectname">Price</label>
+                                                <input type="text" id="product-price" class="form-control" placeholder="Enter product price">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="projectname">Picture</label>
+                                                <input type="text" id="product-picture" class="form-control" placeholder="Product Picture">
+                                            </div>
+                                            <div class="form-group mb-3 col-md-6 col-lg-3">
+                                                <label for="example-date">Product Category</label>
+                                                <select class="custom-select mb-3" id="product-type">
+                                                    <option selected="">Select product type</option>
+                                                    <option value="cat_food">cat_food</option>
+                                                    <option value="dog_food">dog_food</option>
+                                                    <option value="bird_food">bird_food</option>
+                                                    <option value="fish_food">fish_food</option>
+                                                </select>    
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="offer-price">Offer Price</label>
+                                                <input type="text" id="offer-price" class="form-control" placeholder="Offer Price">
+                                            </div>
+
+                                            
+
+    
+                                            </div>
+
+                                        </div> <!-- end col-->
+
+                                        
+
+                                            <!-- Date View -->
+                                            
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                            
+                                                    <a href="#" onClick="addProduct()" class="btn btn-primary btn-rounded">Add Product</a>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end col-->
+                                    </div>
+                                    <!-- end row -->
+
+                                </div> <!-- end card-body -->
+                            </div> <!-- end card-->
+                        </div> <!-- end col-->
                     </div>
+                    <!-- end row-->
+                    
                 </div>
-                <!-- end page title -->
-                <!-- Banner    -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 d-flex">
-                        <img class="col-xl-12 col-lg-12"
-                            src="https://s7d2.scene7.com/is/image/PetSmart/WEB-23-1742300-Mar23_LPB1_HG-General-DNC_DT" alt="">
-                        <h1 class="col-lg-6 col-sm-6 col-md-6 centered text-danger"><b>Dog Shop</b>
-                        </h1>
-                    </div>
-                </div>
-                <br>
-
-                <!-- Categories -->
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="mb-4 mt-4">Category</h4>
-                    </div> <!-- end col -->
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card-deck-wrapper">
-                            <div class="card-deck">
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL2_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Food</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class=" card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL3_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Treats</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1720601-May23_6TPD1_Dog_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cages</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL5_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cleaning</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1669250-Jan23_6COL3_DL1_Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Flea & Tick</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL12_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Clothing</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end card-deck-->
-                        </div> <!-- end card-deck-wrapper-->
-                    </div> <!-- end col-->
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-2">
-
-                                    <div class="col-sm-4">
-
-                                        <a href="add-products.html" id="add-product" class="btn btn-danger mb-2"><i
-                                                class="mdi mdi-plus-circle mr-2"></i> Add Products</a>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-centered w-100 dt-responsive nowrap"
-                                        id="products-datatable-dogs">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th class="all" style="width: 20px;">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="customCheck1">
-                                                        <label class="custom-control-label"
-                                                            for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th class="all">Product</th>
-                                                <th>Category</th>
-                                                <th>Added Date</th>
-                                                <th>Price</th>
-                                                <!-- <th>Quantity</th> -->
-                                                <!-- <th>Status</th> -->
-                                                <!-- <th style="width: 85px;">Action</th> -->
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
-                            </div> <!-- end card-body-->
-                        </div> <!-- end card-->
-                    </div> <!-- end col -->
-                </div>
-                <!-- end row -->
 
             </div> <!-- container -->
 
@@ -714,15 +660,10 @@
 
 
 
-    <script src="js/module.js"></script>
-    <script>
-        window.onload = function () {
-            getDogFoods();
-       };
-       </script>
     <!-- bundle -->
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/app.min.js"></script>
+    <script src="js/module.js"></script>
 
     <!-- third party js -->
     <script src="assets/js/vendor/jquery.dataTables.min.js"></script>

@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="images/favicon/favicon-blue.svg">
 
     <!-- third party css -->
-    <link href="assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
     <!-- third party css end -->
 
     <!-- App css -->
@@ -21,6 +20,7 @@
     <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/mycss.css">
+
 </head>
 
 <body class="loading" data-layout="topnav">
@@ -38,7 +38,7 @@
                     <div class="container-fluid">
 
                         <!-- LOGO -->
-                        <a href="index.html" class="topnav-logo">
+                        <a href="" class="topnav-logo">
                             <span class="topnav-logo-lg">
                                 <img src="images/favicon/favicon-blue.svg" alt="" height="40">
                             </span>
@@ -64,7 +64,7 @@
 
                             
 
-                                  
+                            
 
                             <li class="dropdown notification-list d-none d-sm-inline-block">
                                 <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#"
@@ -144,31 +144,27 @@
                                     </div>
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <a href="pages-profile.html" class="dropdown-item notify-item">
                                         <i class="mdi mdi-account-circle mr-1"></i>
                                         <span>My Account</span>
                                     </a>
 
                                     <!-- item-->
                                     <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-account-edit mr-1"></i>
-                                        <span>Settings</span>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light" id="light-mode-check" checked="">
+                                            <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                                        </div>
+                                        <div class="custom-control custom-switch mb-1">
+                                            <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark" id="dark-mode-check">
+                                            <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                                        </div>
                                     </a>
 
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lifebuoy mr-1"></i>
-                                        <span>Support</span>
-                                    </a>
+                                    
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                        <i class="mdi mdi-lock-outline mr-1"></i>
-                                        <span>Lock Screen</span>
-                                    </a>
-
-                                    <!-- item-->
-                                    <a href="javascript:void(0);" onclick="logout()" class="dropdown-item notify-item">
+                                    <a href="index.html" onclick="logout()" class="dropdown-item notify-item">
                                         <i class="mdi mdi-logout mr-1"></i>
                                         <span>Logout</span>
                                     </a>
@@ -530,213 +526,279 @@
                 </div>
             </div>
 
+
             <!-- Start Content-->
             <div class="container-fluid">
-
+                        
                 <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
                             <div class="page-title-right">
                                 <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dog</a></li>
-                                    <li class="breadcrumb-item active">Products</li>
+                                    <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                                    <li class="breadcrumb-item active">Profile</li>
                                 </ol>
                             </div>
+                            <h4 class="page-title">Profile</h4>
                         </div>
                     </div>
-                </div>
-                <!-- end page title -->
-                <!-- Banner    -->
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 d-flex">
-                        <img class="col-xl-12 col-lg-12"
-                            src="https://s7d2.scene7.com/is/image/PetSmart/WEB-23-1742300-Mar23_LPB1_HG-General-DNC_DT" alt="">
-                        <h1 class="col-lg-6 col-sm-6 col-md-6 centered text-danger"><b>Dog Shop</b>
-                        </h1>
-                    </div>
-                </div>
-                <br>
+                </div>     
+                <!-- end page title --> 
 
-                <!-- Categories -->
-                <div class="row">
-                    <div class="col-12">
-                        <h4 class="mb-4 mt-4">Category</h4>
-                    </div> <!-- end col -->
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card-deck-wrapper">
-                            <div class="card-deck">
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL2_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Food</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class=" card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL3_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Treats</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1720601-May23_6TPD1_Dog_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cages</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL5_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cleaning</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1669250-Jan23_6COL3_DL1_Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Flea & Tick</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL12_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Clothing</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end card-deck-->
-                        </div> <!-- end card-deck-wrapper-->
-                    </div> <!-- end col-->
-                </div>
-                <br>
 
                 <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-2">
+                    <div class="col-sm-12">
+                        <!-- Profile -->
+                        <div class="card bg-primary">
+                            <div class="card-body profile-user-box">
+
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="media">
+                                            <span class="float-left m-2 mr-4"><img src="assets/images/users/avatar-9.jpg" style="height: 100px;" alt="" class="rounded-circle img-thumbnail"></span>
+                                            <div class="media-body">
+
+                                                <h4 class="mt-1 mb-1 text-white">Tasin Tahait Chowdhury</h4>
+                                                <p class="font-13 text-white-50"> Admin</p>
+
+                                                <ul class="mb-0 list-inline text-light">
+                                                    
+                                                    <li class="list-inline-item">
+                                                        <h5 class="mb-1">5482</h5>
+                                                        <p class="mb-0 font-13 text-white-50">Number of Orders</p>
+                                                    </li>
+                                                </ul>
+                                            </div> <!-- end media-body-->
+                                        </div>
+                                    </div> <!-- end col-->
 
                                     <div class="col-sm-4">
+                                        <div class="text-center mt-sm-0 mt-3 text-sm-right">
+                                            <button type="button" class="btn btn-light">
+                                                <i class="mdi mdi-account-edit mr-1"></i> Edit Profile
+                                            </button>
+                                        </div>
+                                    </div> <!-- end col-->
+                                </div> <!-- end row -->
 
-                                        <a href="add-products.html" id="add-product" class="btn btn-danger mb-2"><i
-                                                class="mdi mdi-plus-circle mr-2"></i> Add Products</a>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-centered w-100 dt-responsive nowrap"
-                                        id="products-datatable-dogs">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th class="all" style="width: 20px;">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="customCheck1">
-                                                        <label class="custom-control-label"
-                                                            for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th class="all">Product</th>
-                                                <th>Category</th>
-                                                <th>Added Date</th>
-                                                <th>Price</th>
-                                                <!-- <th>Quantity</th> -->
-                                                <!-- <th>Status</th> -->
-                                                <!-- <th style="width: 85px;">Action</th> -->
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
-                            </div> <!-- end card-body-->
-                        </div> <!-- end card-->
-                    </div> <!-- end col -->
+                            </div> <!-- end card-body/ profile-user-box-->
+                        </div><!--end profile/ card -->
+                    </div> <!-- end col-->
                 </div>
                 <!-- end row -->
 
-            </div> <!-- container -->
 
-        </div> <!-- content -->
-
-        <!-- Footer Start -->
-        <footer class="footer">
-            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
-                        <script>document.write(new Date().getFullYear())</script> © Paw & Feathers -
-                        pawsnfeathers.xy
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-md-right footer-links d-none d-md-block">
-                            <a href="javascript: void(0);">About</a>
-                            <a href="javascript: void(0);">Support</a>
-                            <a href="javascript: void(0);">Contact Us</a>
+                    <div class="col-lg-4">
+                        <!-- Personal-Information -->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mt-0 mb-3">About</h4>
+                                <p class="text-muted font-13">
+                                    Hye, I’m Michael Franklin residing in this beautiful world. I create websites and mobile apps with great UX and UI design. I have done work with big companies like Nokia, Google and Yahoo. Meet me or Contact me for any queries. One Extra line for filling space. Fill as many you want.
+                                </p>
+
+                                <hr>
+
+                                <div class="text-left">
+                                    <p class="text-muted"><strong>Full Name :</strong> <span class="ml-2">Tasin Tahiat Chowdhury</span></p>
+
+                                    <p class="text-muted"><strong>Mobile :</strong><span class="ml-2">(+12) 123 1234 567</span></p>
+
+                                    <p class="text-muted"><strong>Email :</strong> <span class="ml-2">coderthemes@gmail.com</span></p>
+
+                                    <p class="text-muted"><strong>Location :</strong> <span class="ml-2">USA</span></p>
+
+                                    <p class="text-muted"><strong>Languages :</strong>
+                                        <span class="ml-2"> English, German, Spanish </span>
+                                    </p>
+                                    <p class="text-muted mb-0"><strong>Elsewhere :</strong>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Facebook"><i class="mdi mdi-facebook"></i></a>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Twitter"><i class="mdi mdi-twitter"></i></a>
+                                        <a class="d-inline-block ml-2 text-muted" title="" data-placement="top" data-toggle="tooltip" href="" data-original-title="Skype"><i class="mdi mdi-skype"></i></a>
+                                    </p>
+
+                                </div>
+                            </div>
                         </div>
+                        <!-- Personal-Information -->
+
+                        
+
+                        <!-- Messages-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">Messages</h4>
+
+                                <div class="inbox-widget">
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="assets/images/users/avatar-2.jpg" class="rounded-circle" alt=""></div>
+                                        <p class="inbox-item-author">Tomaslau</p>
+                                        <p class="inbox-item-text">I've finished it! See you so...</p>
+                                        <p class="inbox-item-date">
+                                            <a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>
+                                        </p>
+                                    </div>
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="assets/images/users/avatar-3.jpg" class="rounded-circle" alt=""></div>
+                                        <p class="inbox-item-author">Stillnotdavid</p>
+                                        <p class="inbox-item-text">This theme is awesome!</p>
+                                        <p class="inbox-item-date">
+                                            <a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>
+                                        </p>
+                                    </div>
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="assets/images/users/avatar-4.jpg" class="rounded-circle" alt=""></div>
+                                        <p class="inbox-item-author">Kurafire</p>
+                                        <p class="inbox-item-text">Nice to meet you</p>
+                                        <p class="inbox-item-date">
+                                            <a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>
+                                        </p>
+                                    </div>
+
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="assets/images/users/avatar-5.jpg" class="rounded-circle" alt=""></div>
+                                        <p class="inbox-item-author">Shahedk</p>
+                                        <p class="inbox-item-text">Hey! there I'm available...</p>
+                                        <p class="inbox-item-date">
+                                            <a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>
+                                        </p>
+                                    </div>
+                                    <div class="inbox-item">
+                                        <div class="inbox-item-img"><img src="assets/images/users/avatar-6.jpg" class="rounded-circle" alt=""></div>
+                                        <p class="inbox-item-author">Adhamdannaway</p>
+                                        <p class="inbox-item-text">This theme is awesome!</p>
+                                        <p class="inbox-item-date">
+                                            <a href="#" class="btn btn-sm btn-link text-info font-13"> Reply </a>
+                                        </p>
+                                    </div>
+                                </div> <!-- end inbox-widget -->
+                            </div> <!-- end card-body-->
+                        </div> <!-- end card-->
+
+                    </div> <!-- end col-->
+
+                    <div class="col-lg-8">
+                        
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class="dripicons-basket float-right text-muted"></i>
+                                        <h6 class="text-muted text-uppercase mt-0">Orders</h6>
+                                        <h2 class="m-b-20">1,587</h2>
+                                        <span class="badge badge-primary"> +11% </span> <span class="text-muted">From previous period</span>
+                                    </div> <!-- end card-body-->
+                                </div> <!--end card-->
+                            </div><!-- end col -->
+
+                            
+
+                            <div class="col-sm-6">
+                                <div class="card tilebox-one">
+                                    <div class="card-body">
+                                        <i class="dripicons-jewel float-right text-muted"></i>
+                                        <h6 class="text-muted text-uppercase mt-0">Product Sold</h6>
+                                        <h2 class="m-b-20">1,890</h2>
+                                        <span class="badge badge-primary"> +89% </span> <span class="text-muted">Last year</span>
+                                    </div> <!-- end card-body-->
+                                </div> <!--end card-->
+                            </div><!-- end col -->
+
+                        </div>
+                        <!-- end row -->
+
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-3">My Products</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Price</th>
+                                                <th>Stock</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ASOS Ridley High Waist</td>
+                                                <td>$79.49</td>
+                                                <td><span class="badge badge-primary">82 Pcs</span></td>
+                                                <td>$6,518.18</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marco Lightweight Shirt</td>
+                                                <td>$128.50</td>
+                                                <td><span class="badge badge-primary">37 Pcs</span></td>
+                                                <td>$4,754.50</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Half Sleeve Shirt</td>
+                                                <td>$39.99</td>
+                                                <td><span class="badge badge-primary">64 Pcs</span></td>
+                                                <td>$2,559.36</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Lightweight Jacket</td>
+                                                <td>$20.00</td>
+                                                <td><span class="badge badge-primary">184 Pcs</span></td>
+                                                <td>$3,680.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Marco Shoes</td>
+                                                <td>$28.49</td>
+                                                <td><span class="badge badge-primary">69 Pcs</span></td>
+                                                <td>$1,965.81</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- end table responsive-->
+                            </div> <!-- end col-->
+                        </div> <!-- end row-->
+
                     </div>
+                    <!-- end col -->
+
                 </div>
+                <!-- end row -->
+                
             </div>
-        </footer>
-        <!-- end Footer -->
 
-    </div>
-
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
 
 
-    </div>
-    <!-- END wrapper -->
+        </div>
 
 
 
 
 
-    <script src="js/module.js"></script>
-    <script>
-        window.onload = function () {
-            getDogFoods();
-       };
-       </script>
-    <!-- bundle -->
-    <script src="assets/js/vendor.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
 
-    <!-- third party js -->
-    <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
-    <script src="assets/js/vendor/dataTables.bootstrap4.js"></script>
-    <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
-    <script src="assets/js/vendor/responsive.bootstrap4.min.js"></script>
-    <script src="assets/js/vendor/dataTables.checkboxes.min.js"></script>
+        <!-- /Right-bar -->
+        <script src="assets/js/pages/demo.profile.js"></script>
 
-    <!-- third party js ends -->
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        <script src="js/module.js"></script>
 
-    <!-- demo app -->
-    <script src="assets/js/pages/demo.products.js"></script>
-    <!-- end demo js-->
+        <!-- third party js -->
+        <script src="assets/js/vendor/apexcharts.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- third party js ends -->
 
+        <!-- demo app -->
+        <script src="assets/js/pages/demo.dashboard.js"></script>
+        <!-- end demo js-->
 </body>
 
 </html>

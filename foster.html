@@ -11,8 +11,7 @@
     <link rel="shortcut icon" href="images/favicon/favicon-blue.svg">
 
     <!-- third party css -->
-    <link href="assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
     <!-- third party css end -->
 
     <!-- App css -->
@@ -21,6 +20,7 @@
     <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
     <!-- My CSS -->
     <link rel="stylesheet" href="assets/css/mycss.css">
+
 </head>
 
 <body class="loading" data-layout="topnav">
@@ -168,7 +168,7 @@
                                     </a>
 
                                     <!-- item-->
-                                    <a href="javascript:void(0);" onclick="logout()" class="dropdown-item notify-item">
+                                    <a href="index.html" onclick="logout()" class="dropdown-item notify-item">
                                         <i class="mdi mdi-logout mr-1"></i>
                                         <span>Logout</span>
                                     </a>
@@ -530,20 +530,33 @@
                 </div>
             </div>
 
+
             <!-- Start Content-->
             <div class="container-fluid">
 
+                
                 <!-- start page title -->
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
                             <div class="page-title-right">
-                                <ol class="breadcrumb m-0">
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="javascript: void(0);">Dog</a></li>
-                                    <li class="breadcrumb-item active">Products</li>
-                                </ol>
+                                <form class="form-inline">
+
+                                    <a href="javascript: void(0);" class="btn btn-primary ml-2">
+                                        <p>Bogo Offer</p>
+                                    </a>
+                                    <a href="foster.html" class="btn btn-primary ml-2">
+                                        <p>Foster Home</p>
+                                    </a>
+                                    <a href="vet.html" class="btn btn-primary ml-2">
+                                        <p>Vet Finder</p>
+                                    </a>
+                                    <a href="blogs.html" class="btn btn-primary ml-2">
+                                        <p>Blog</p>
+                                    </a>
+                                </form>
                             </div>
+                            <h4 class="page-title">Foster Home</h4>
                         </div>
                     </div>
                 </div>
@@ -552,191 +565,348 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 d-flex">
                         <img class="col-xl-12 col-lg-12"
-                            src="https://s7d2.scene7.com/is/image/PetSmart/WEB-23-1742300-Mar23_LPB1_HG-General-DNC_DT" alt="">
-                        <h1 class="col-lg-6 col-sm-6 col-md-6 centered text-danger"><b>Dog Shop</b>
-                        </h1>
+                            src="//images.ctfassets.net/2t8dhn7s97w9/3WqCklZ5GWe8hGjr6ws9CE/0e5f63932ed48fe4ad7f8f4c13358dfa/SERV-957585-PSH-HB-x2.png" alt="">
+                        <h2 class="centered text-dark"><b>Foster Home</b></h2>
+                        
                     </div>
                 </div>
                 <br>
 
-                <!-- Categories -->
+                <!-- form -->
+
                 <div class="row">
+
                     <div class="col-12">
-                        <h4 class="mb-4 mt-4">Category</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title ">Book for your pet</h4>
+                                <marquee class="text-muted font-14">
+                                    We provide temporary care to shelter animals who need to live in a home environment prior to adoption.
+                                </marquee>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane show active" id="daterange-picker-preview">
+                                        
+                                        <div class="row">
+                                            <div class="form-group mb-3 col-md-6 col-lg-3">
+                                                <label for="example-date">Check in</label>
+                                                <input class="form-control" id="example-date" type="date" name="date">
+                                            </div>
+                                            <div class="form-group mb-3 col-md-6 col-lg-3">
+                                                <label for="example-date">Check out</label>
+                                                <input class="form-control" id="example-date" type="date" name="date">
+                                            </div>
+                                            <div class="form-group mb-3 col-md-6 col-lg-3">
+                                                <label for="example-date">Guest</label>
+                                                <select class="custom-select mb-3">
+                                                    <option selected="">Select pet type</option>
+                                                    <option value="1">Cat</option>
+                                                    <option value="2">Dog</option>
+                                                    <option value="3">Bird</option>
+                                                    <option value="3">Fish</option>
+                                                </select>    
+                                            </div>
+                                            <div class="form-group mb-3 col-md-6 col-lg-3 ">
+                                                <label for="example-select">Number of pet</label>
+                                                <select class="form-control" id="example-select">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            
+
+                                            
+                                        </div> 
+                                        <div class=" col-6 d-flex">
+                                            <button type="submit" class="btn btn-outline-info"><h4>Check rates and request reservation</h4></button>                     
+                                    
+                                        </div> <!-- end preview-->
+                                
+                                    
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div> <!-- end card-->
                     </div> <!-- end col -->
                 </div>
+                <!-- form end -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card-deck-wrapper">
                             <div class="card-deck">
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL2_DL1-Category_DT"
-                                        alt="Card image cap">
+                                <div class="card d-block">
+                                    <img class="card-img-top" src="https://images.ctfassets.net/2t8dhn7s97w9/6XaYTF88SxiRp3ZCRRXvl2/a52467f67654c306b65574e75bd7db1e/PSH-Boarding-Icons-01.png" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center underline">Food</h5>
-
+                                        <h5 class="card-title font-black">Private Suite</h5>
+                                        <p class="card-text">
+                                            Larger, more private accommodations with calming diffuser, white noise machine & our oh-so-comfy Superb Sleeper bed.</p>
+                                           
                                     </div>
                                 </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class=" card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL3_DL1-Category_DT"
-                                        alt="Card image cap">
+                                <div class="card d-block">
+                                    <img class="card-img-top" src="https://images.ctfassets.net/2t8dhn7s97w9/571uUc87X5U2FAFCcH1ei0/e38110a167f98bf584b89b0f457af79c/PSH-Boarding-Icons-02.png" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center underline">Treats</h5>
-
+                                        <h5 class="card-title font-black">Standard</h5>
+                                        <p class="card-text">Comfy & secure individual accommodations with calming spray upon arrival.</p>
+                                           
                                     </div>
                                 </div> <!-- end card-->
-
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1720601-May23_6TPD1_Dog_DT"
-                                        alt="Card image cap">
+                                <div class="card d-block">
+                                    <img class="card-img-top" src="https://images.ctfassets.net/2t8dhn7s97w9/1fKNiqsZwtitbisZ2MQ2Sy/5b738796da714e9677c4b585243c1c64/PSH-Boarding-Icons-03.png" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cages</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL5_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Cleaning</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1669250-Jan23_6COL3_DL1_Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Flea & Tick</h5>
-
-                                    </div>
-                                </div> <!-- end card-->
-                                <div class="card d-block radius">
-                                    <img class="card-img-top"
-                                        src="https://s7d2.scene7.com/is/image/PetSmart/WEB-1605904-Jan23_6COL12_DL1-Category_DT"
-                                        alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title text-center underline">Clothing</h5>
-
+                                        <h5 class="card-title font-black">Kitty Cottage</h5>
+                                        <p class="card-text">
+                                            Our cottages are separate from dog guests & cleaned & sanitized daily. Cottages with connecting doors for up to two cats are available.</p>
+                                           
                                     </div>
                                 </div> <!-- end card-->
                             </div> <!-- end card-deck-->
                         </div> <!-- end card-deck-wrapper-->
                     </div> <!-- end col-->
                 </div>
-                <br>
+                <!-- Overnight stays include -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="mb-4 mt-4 font-black">Overnight stays include</h4>
+                    </div> <!-- end col -->
+                </div>
+                <div class="row">
+                    <div class="">
+                        <div class="card-deck-wrapper">
+                            <div class="card-deck">
+                                <!-- card start -->
+                                <div class="card d-block col-lg-3 col-md-6">
+                                    <img class="card-img-top img8080 rounded mx-auto d-block" src="https://images.ctfassets.net/2t8dhn7s97w9/4PuP6vfF7NejVL2YFEXAFy/1c4660bfb9442444a1ba53e7734442b7/SERV-957585-PSH-24_7-Icon.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Hotel Hosts on-site 24/7</p>
+                                        
+                                    </div>
+                                </div> <!-- end card-->
+                                <!-- card start -->
+                                <div class="card d-block col-lg-3 col-md-6">
+                                    <img class="card-img-top img8080 rounded mx-auto d-block" src="https://images.ctfassets.net/2t8dhn7s97w9/6RZgFCYqJ0Oj9YeXp0ClnA/fb7631b8f6880a86fa84168ff014880e/SERV-957585-PSH-Pickup-Icon.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Convenient drop-off & pickup times</p>
+                                        
+                                    </div>
+                                </div> <!-- end card-->
+                                <!-- card start -->
+                                <div class="card d-block col-lg-3 col-md-6">
+                                    <img class="card-img-top img8080 rounded mx-auto d-block" src="https://images.ctfassets.net/2t8dhn7s97w9/3G524WnGRLdedsrOfEJc0z/6ffef0d4c09a67d6dbc57921d95a81fa/SERV-957585-PSH-Vet-Care-Icon.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Medication administering if needed</p>
+                                        
+                                    </div>
+                                </div> <!-- end card-->
+                                <!-- card start -->
+                                <div class="card d-block col-lg-3 col-md-6">
+                                    <img class="card-img-top img8080 rounded mx-auto d-block" src="https://images.ctfassets.net/2t8dhn7s97w9/7HYWkeL3dhMFGCeiOsBYcS/e962fde400d2c04ea6a592122b59e680/SERV-957585-PSH-Cat-Calming-Icon.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            Complimentary calming pheromones</p>
+                                        
+                                    </div>
+                                </div> <!-- end card-->
+                                
+                                
+                            </div> <!-- end card-deck-->
+                        </div> <!-- end card-deck-wrapper-->
+                    </div>
+    
+                </div>
+                
+                <!-- Special offers -->
 
                 <div class="row">
                     <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row mb-2">
-
-                                    <div class="col-sm-4">
-
-                                        <a href="add-products.html" id="add-product" class="btn btn-danger mb-2"><i
-                                                class="mdi mdi-plus-circle mr-2"></i> Add Products</a>
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="table-responsive">
-                                    <table class="table table-centered w-100 dt-responsive nowrap"
-                                        id="products-datatable-dogs">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th class="all" style="width: 20px;">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" class="custom-control-input"
-                                                            id="customCheck1">
-                                                        <label class="custom-control-label"
-                                                            for="customCheck1">&nbsp;</label>
-                                                    </div>
-                                                </th>
-                                                <th class="all">Product</th>
-                                                <th>Category</th>
-                                                <th>Added Date</th>
-                                                <th>Price</th>
-                                                <!-- <th>Quantity</th> -->
-                                                <!-- <th>Status</th> -->
-                                                <!-- <th style="width: 85px;">Action</th> -->
-                                            </tr>
-                                        </thead>
-                                        <tbody></tbody>
-                                    </table>
-                                </div>
-                            </div> <!-- end card-body-->
-                        </div> <!-- end card-->
+                        <h4 class="mb-4 mt-4 font-black">Special Offers</h4>
                     </div> <!-- end col -->
                 </div>
-                <!-- end row -->
-
-            </div> <!-- container -->
-
-        </div> <!-- content -->
-
-        <!-- Footer Start -->
-        <footer class="footer">
-            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6">
-                        <script>document.write(new Date().getFullYear())</script> © Paw & Feathers -
-                        pawsnfeathers.xy
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-md-right footer-links d-none d-md-block">
-                            <a href="javascript: void(0);">About</a>
-                            <a href="javascript: void(0);">Support</a>
-                            <a href="javascript: void(0);">Contact Us</a>
-                        </div>
+
+                    <div class="col-12">
+                        <div class="card-deck-wrapper">
+                            <div class="card-deck">
+                                
+                                <!-- card start -->
+                                <div class="card d-block border border-secondary col-lg-4 col-md-4">
+                                    <div class="card-body">
+                                        
+                                        <a href="#" class="btn btn-outline-success btn-sm mb-3">10% off</a>
+                                        <h5 class="card-title font-black">Summer Hotel Special</h5>
+                                         <p class="card-text">Add our seasonal upgrade with lots of goodies to your pup's next stay.*
+                                    </div>
+                                </div> <!-- end card-->
+                                <!-- card start -->
+                                <div class="card d-block border border-secondary col-lg-4 col-md-4">
+                                    <div class="card-body">
+                                        <a href="#" class="btn btn-outline-success btn-sm mb-3">10% off</a>
+                                        <h5 class="card-title font-black">Senior/Military/First Responders                                </h5>
+                                        <p class="card-text">Available on overnight stays.**</p>
+                                        <small>See PetsHotel for details.</small></div>
+                                </div> <!-- end card-->
+                                <!-- card start -->
+                                <div class="card d-block border border-secondary ">
+                                    <div class="card-body">
+                                        <a href="#" class="btn btn-outline-success btn-sm mb-3">1 FREE Night</a>
+                                        <h5 class="card-title font-black">New Customer Special</h5>
+                                        <p class="card-text">with your pet’s first multi-night stay**</p>
+                                        
+                                    </div>
+                                </div> <!-- end card-->
+                                
+                                
+                                
+                            </div> <!-- end card-deck-->
+                        </div> <!-- end card-deck-wrapper-->
                     </div>
                 </div>
+
+                <!-- FAQ -->
+                
+
+                <div class="row">
+
+                    <div class="col-12">
+                        <section class="faq container">
+                            <h1 class="text-center font-black">Frequently <span class="text-warning">Asked Questions</span></h1>
+                            <div class="container">
+                                <div class=" row d-flex align-items-center justify-content-center mb-1 py-5">
+                                    <div class="faq-img col-lg-4 ">
+                                        <img class="img-fluid" src="images/faq.png" alt="">
+                                    </div>
+                                    <div class="faq-content  col-lg-8">
+                
+                                        <p>
+                                            <button class="btn dropdown-toggle" type="button" data-toggle="collapse"
+                                                data-target="#faq-ans2" aria-expanded="false" aria-controls="faq-ans2">
+                                                What vaccinations do you require?
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="faq-ans2">
+                                            <div class="card card-body">
+                                                To maintain a safe, comfortable environment, we require all pets to be current on their rabies vaccinations and to wait at least 48 hours after any vaccinations before checking in. Proof of rabies vaccination in the form of paperwork is required. The waiting period helps to ensure your pet isn't sore at the injection site, which can cause irritability or lethargy. This waiting period also is to prevent stressing a pet who may be experiencing an unexpected allergic reaction from a vaccine/vaccination. Puppies and kittens between 8 weeks and 4 months of age (3 months in Indiana) may receive services in the salon without vaccinations. In New York City, 6-month Bordetella and DHPP with Adenovirus are also required. In Iowa, DPP with Adenovirus is required. In Connecticut, proof of town license is required. Please note: All pets must be in good health prior to receiving any grooming services.
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <button class="btn dropdown-toggle" type="button" data-toggle="collapse"
+                                                data-target="#faq-ans3" aria-expanded="false" aria-controls="faq-ans3">
+                                                How do I book a grooming appointment online?
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="faq-ans3">
+                                            <div class="card card-body">
+                                                At the top of the screen you will see “Click Appointment or Check Prices.” Select the dog or cat icon based on your pet. Select breed and age. Then click “Check Prices.” The Grooming Salon Menu on the right side of the screen will populate with estimated pricing for all services available for your pet. Once a service is selected, you will go to the Service log-in page to continue your booking. You’ll be prompted to sign into your PetSmart account or sign up and provide your name, your pet’s information, and your email address to get started. You can book your favorite Pet Stylist, check availability, make appointments and sign up for text alerts.
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <button class="btn dropdown-toggle" type="button" data-toggle="collapse"
+                                                data-target="#faq-ans4" aria-expanded="false" aria-controls="faq-ans4">
+                                                Do I need to book an appointment in advance?
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="faq-ans4">
+                                            <div class="card card-body">
+                                                Booking an appointment for a grooming service ahead of time ensures that you and your pet are not kept waiting any longer than necessary. Weekends tend to be especially busy, so appointments are highly recommended on Saturdays and Sundays. We're happy to take walk-ins when we have availability. Please note: All cat services require specially trained associates to complete, are not available on weekends and are only available at select salons. Call your salon ahead of time to ensure a certified cat groomer is available.    
+                                            </div>
+                                        </div>
+                                        <p>
+                                            <button class="btn dropdown-toggle" type="button" data-toggle="collapse"
+                                                data-target="#faq-ans5" aria-expanded="false" aria-controls="faq-ans5">
+                                                How do I get the cost of my pet's grooming appointment?
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="faq-ans5">
+                                            <div class="card card-body">
+                                                Prices for base packages are based on breed, condition of coat and length of service. In order to get a price estimate before your appointment, we recommend booking your appointment online or calling your salon.    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section> <!-- end card-deck-wrapper-->
+                    </div>
+                    
+                </div>
+
+
+                
+
+
+                
+                
+                
+                
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> © Paw & Feathers -
+                                pawsnfeathers.xy
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);">About</a>
+                                    <a href="javascript: void(0);">Support</a>
+                                    <a href="javascript: void(0);">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
             </div>
-        </footer>
-        <!-- end Footer -->
 
-    </div>
-
-    <!-- ============================================================== -->
-    <!-- End Page content -->
-    <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
 
 
-    </div>
-    <!-- END wrapper -->
+        
 
 
 
 
 
-    <script src="js/module.js"></script>
-    <script>
-        window.onload = function () {
-            getDogFoods();
-       };
-       </script>
-    <!-- bundle -->
-    <script src="assets/js/vendor.min.js"></script>
-    <script src="assets/js/app.min.js"></script>
 
-    <!-- third party js -->
-    <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
-    <script src="assets/js/vendor/dataTables.bootstrap4.js"></script>
-    <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
-    <script src="assets/js/vendor/responsive.bootstrap4.min.js"></script>
-    <script src="assets/js/vendor/dataTables.checkboxes.min.js"></script>
+        <!-- /Right-bar -->
 
-    <!-- third party js ends -->
 
-    <!-- demo app -->
-    <script src="assets/js/pages/demo.products.js"></script>
-    <!-- end demo js-->
+        <!-- bootstrap script -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
+        <!-- bundle -->
+        <script src="assets/js/vendor.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- third party js -->
+        <script src="assets/js/vendor/apexcharts.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- third party js ends -->
+
+        <!-- demo app -->
+        <script src="assets/js/pages/demo.dashboard.js"></script>
+        <!-- end demo js-->
+
+        
 </body>
 
 </html>
